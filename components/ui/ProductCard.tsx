@@ -15,19 +15,19 @@ export default function ProductCard({
 }: ProductProps) {
   return (
     <div className="flex flex-col">
-      
-      {/* Image box ONLY */}
-      <div className="bg-white rounded-xl border border-gray-200 p-4 h-50 flex items-center justify-center overflow-hidden">
+      {/* Image box */}
+      <div className="bg-white rounded-xl border border-gray-200 p-4 min-h-[200px] flex items-center justify-center overflow-hidden">
         <Image
           src={image}
           alt={name}
           width={200}
           height={200}
           className="object-contain"
+          priority={false}
         />
       </div>
 
-      {/* Text OUTSIDE the box */}
+      {/* Text */}
       <div className="mt-3">
         <h3 className="text-sm font-semibold uppercase leading-tight line-clamp-2">
           {name}
@@ -38,7 +38,7 @@ export default function ProductCard({
         </p>
 
         <p className="text-sm font-semibold mt-1">
-          ₹ {price}
+          ₹ {price.toLocaleString("en-IN")}
         </p>
       </div>
     </div>
