@@ -2,16 +2,14 @@ import Link from "next/link"
 import Image from "next/image"
 
 type Props = {
-  id: string
+  id: number
   title: string
-  subtitle: string
   price: number
   image: string
 }
 export default function BestSellingCard({
   id,
   title,
-  subtitle,
   price,
   image,
 }: Props) {
@@ -20,7 +18,6 @@ export default function BestSellingCard({
       <div className="cursor-pointer">
         <Image src={image} alt={title} width={200} height={200} />
         <h3>{title}</h3>
-        <p>{subtitle}</p>
         <p>₹ {price}</p>
       </div>
     </Link>
