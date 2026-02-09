@@ -11,9 +11,9 @@ export default function Footer() {
         {/* BRAND + NEWSLETTER */}
         <div className="md:col-span-1">
           <Image
-            src="https://atharveda.com/wp-content/uploads/2025/06/atharveda_1-scaled.png"
+            src="jevansrot-logo.svg"
             alt="Atharveda"
-            width={210}
+            width={120}
             height={60}
             className="mb-6"
           />
@@ -25,7 +25,7 @@ export default function Footer() {
           <form className="space-y-3">
             <input
               type="email"
-              placeholder="Enter your email .. *"
+              placeholder="Enter your email .."
               className="w-full h-14 px-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-1 focus:ring-black"
             />
             <button
@@ -99,17 +99,16 @@ export default function Footer() {
             className="mx-auto"
           />
 
-          <p className="text-sm">
-            © 2025 | Made with ❤️ by DigiPix Media
-          </p>
-
+      <p className="text-center text-sm text-gray-600">
+        © {new Date().getFullYear()} Jevansrot. All rights reserved.
+      </p>
           <p className="font-semibold">
-            100% Plant-Based Wellness from Atharveda – Pure, Ethical, and Eco-Friendly.
+            100% Plant-Based Wellness from jeevansrot  – Pure, Ethical, and Eco-Friendly.
           </p>
 
           {/* APP DOWNLOAD */}
           <div className="flex items-center justify-center gap-4 pt-4">
-            <span className="text-sm">Download Atharveda Store App</span>
+            <span className="text-sm">Download jeevansrot Store App</span>
 
             <Image
               src="http://atharveda.com/wp-content/uploads/2024/01/app-google-play-1.png"

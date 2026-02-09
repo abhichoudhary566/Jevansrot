@@ -28,13 +28,13 @@ export default function HeaderTopBar() {
         {/* CENTER – LOGO */}
         <div className="flex-1 flex justify-center">
           <Link href="/">
-            <Image
-              src="/logo.svg"
-              alt="Atharveda"
-              width={45}
-              height={45}
-              priority
-            />
+          <Image
+            src="jevansrot-logo.svg"
+            alt="Atharveda"
+            width={90}
+            height={90}
+            // className=""
+          />
           </Link>
         </div>
 

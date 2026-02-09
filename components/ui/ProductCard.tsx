@@ -1,46 +1,31 @@
+import Link from "next/link"
 import Image from "next/image"
 
-type ProductProps = {
-  name: string
-  subtitle: string
+type Props = {
+  id: string
+  title: string
   price: number
   image: string
 }
 
-export default function ProductCard({
-  name,
-  subtitle,
+export default function BestSellingCard({
+  id,
+  title,
   price,
   image,
-}: ProductProps) {
+}: Props) {
   return (
-    <div className="flex flex-col">
-      {/* Image box */}
-      <div className="bg-white rounded-xl border border-gray-200 p-4 min-h-[200px] flex items-center justify-center overflow-hidden">
+    <Link href={`/product/${id}`}>
+      <div className="cursor-pointer">
         <Image
-          src={image}
-          alt={name}
-          width={200}
-          height={200}
-          className="object-contain"
-          priority={false}
-        />
+  src={image}
+  alt={title ?? "Product image"}
+  width={200}
+  height={200}
+/>
+        <h3>{title}</h3>
+        <p>₹ {price}</p>
       </div>
-
-      {/* Text */}
-      <div className="mt-3">
-        <h3 className="text-sm font-semibold uppercase leading-tight line-clamp-2">
-          {name}
-        </h3>
-
-        <p className="text-sm text-gray-600 mt-1 line-clamp-2">
-          {subtitle}
-        </p>
-
-        <p className="text-sm font-semibold mt-1">
-          ₹ {price.toLocaleString("en-IN")}
-        </p>
-      </div>
-    </div>
+    </Link>
   )
 }
