@@ -9,10 +9,10 @@ export default function FeaturedProducts() {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         <ProductCard
-          title="ATHARMELINO POWDER"
-          price="₹2500"
-          img="/images/melino.jpg"
-          hover="/images/melino-hover.jpg"
+          name="ATHARMELINO POWDER"
+          subtitle="Natural herbal powder for daily wellness"
+          price={2500}
+          image="/images/melino.jpg"
         />
       </div>
     </section>
