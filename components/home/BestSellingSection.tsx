@@ -13,12 +13,12 @@ export default function BestSellingSection() {
 
         {/* GRID */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-          {bestSellingProducts.map((product) => (
+          {bestSellingProducts.map((item) => (
             <BestSellingCard
-              key={product.id}
-              title={product.title}
-              price={product.price}
-              image={product.image}
+              key={item.id}  
+              title={item.title}
+              price={item.price}
+              image={item.image}
             />
 
           ))}
